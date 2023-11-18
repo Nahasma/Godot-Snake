@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/img/collection/apple_frame.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://script/collection/Apple.gd" type="Script" id=2]
+[ext_resource path="res://Scene/Collection/TestApple.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 14.0
+
+[node name="Collection" type="Node2D"]
+
+[node name="TestApple" type="Area2D" parent="." groups=["Testapple"]]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestApple"]
+position = Vector2( 16, 16 )
+shape = SubResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="TestApple"]
+visible = false
+polygon = PoolVector2Array( 4, 8, 4, 26, 28, 26, 28, 8 )
+
+[node name="Apple" type="Area2D" parent="." groups=["collection"]]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="apple_frame" type="AnimatedSprite" parent="Apple"]
+position = Vector2( 16, 16 )
+frames = ExtResource( 1 )
+
+[connection signal="area_entered" from="TestApple" to="TestApple" method="_on_TestApple_area_entered"]
+[connection signal="area_entered" from="Apple" to="Apple" method="_on_Apple_area_entered"]
+[connection signal="body_entered" from="Apple" to="Apple" method="_on_Apple_body_entered"]

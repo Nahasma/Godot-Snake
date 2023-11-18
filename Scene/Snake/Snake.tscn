@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/img/snake/snake-head/snake-head.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://script/player/player.gd" type="Script" id=2]
+[ext_resource path="res://script/player/Snake.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 13.0
+
+[node name="Snake" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="SnakeHead" type="Area2D" parent="." groups=["head"]]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnakeHead"]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="SnakeHead"]
+frames = ExtResource( 1 )
+
+[connection signal="area_entered" from="SnakeHead" to="SnakeHead" method="_on_SnakeHead_area_entered"]
+[connection signal="barrier_hit" from="SnakeHead" to="." method="_on_SnakeHead_barrier_hit"]
+[connection signal="collection_hit" from="SnakeHead" to="." method="_on_SnakeHead_collection_hit"]
