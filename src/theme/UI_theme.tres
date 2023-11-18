@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=2]
+
+[resource]
+Button/colors/font_color = Color( 1, 1, 1, 0.509804 )
+Button/colors/font_color_focus = Color( 0.941176, 0.941176, 0.941176, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/fonts/font = null
+VBoxContainer/constants/separation = 32
