@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="贪吃蛇"
+config/name="贪吃蛇V1.0"
 run/main_scene="res://Scene/Area/world.tscn"
 
 [display]
