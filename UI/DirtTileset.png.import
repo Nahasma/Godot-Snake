@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeartUIFull.png-e9d9ebbeee52aaa00895457d920c0f53.stex"
+path="res://.import/DirtTileset.png-69e5bdd6a287b39aa8893668ef73af8a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/HeartUIFull.png"
-dest_files=[ "res://.import/HeartUIFull.png-e9d9ebbeee52aaa00895457d920c0f53.stex" ]
+source_file="res://UI/DirtTileset.png"
+dest_files=[ "res://.import/DirtTileset.png-69e5bdd6a287b39aa8893668ef73af8a.stex" ]
 
 [params]
 

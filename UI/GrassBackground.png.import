@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex"
+path="res://.import/GrassBackground.png-001393108fad5d8e837f3545280fb117.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Bush.png"
-dest_files=[ "res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex" ]
+source_file="res://UI/GrassBackground.png"
+dest_files=[ "res://.import/GrassBackground.png-001393108fad5d8e837f3545280fb117.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
