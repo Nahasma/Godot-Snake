@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/img/UI/Pause/pause.png" type="Texture" id=1]
+[ext_resource path="res://src/img/UI/Pause/home.png" type="Texture" id=2]
+[ext_resource path="res://src/img/UI/Pause/continue.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Area/PauseButton.gd" type="Script" id=4]
+[ext_resource path="res://Scene/Area/Continue.gd" type="Script" id=5]
+[ext_resource path="res://Scene/Area/GeneralStatus.gd" type="Script" id=6]
+[ext_resource path="res://Scene/Area/ContinueClock.gd" type="Script" id=7]
+[ext_resource path="res://Scene/Area/Clock.gd" type="Script" id=8]
+[ext_resource path="res://Scene/Area/Pause.gd" type="Script" id=9]
+[ext_resource path="res://src/img/UI/Clock/number.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://Scene/HUD/BackToHome.gd" type="Script" id=11]
+
+[sub_resource type="Theme" id=3]
+
+[node name="HUD" type="Control"]
+
+[node name="Clock" type="Control" parent="."]
+script = ExtResource( 8 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Clock"]
+position = Vector2( 432, 240 )
+frames = ExtResource( 10 )
+centered = false
+
+[node name="Pause" type="Control" parent="."]
+pause_mode = 2
+margin_right = 1024.0
+margin_bottom = 640.0
+script = ExtResource( 9 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Pause"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -64.0
+margin_right = -20.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="Pause/HBoxContainer"]
+margin_right = 326.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BackToHome" type="Button" parent="Pause/HBoxContainer"]
+margin_left = 330.0
+margin_right = 657.0
+margin_bottom = 64.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme = SubResource( 3 )
+icon = ExtResource( 2 )
+icon_align = 1
+script = ExtResource( 11 )
+
+[node name="Continue" type="Button" parent="Pause/HBoxContainer"]
+margin_left = 661.0
+margin_right = 988.0
+margin_bottom = 64.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+icon = ExtResource( 3 )
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="ContinueClock" type="Timer" parent="Pause/HBoxContainer/Continue"]
+script = ExtResource( 7 )
+
+[node name="PauseColorRect" type="ColorRect" parent="Pause"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 642.0
+color = Color( 0, 0, 0, 0.27451 )
+
+[node name="GeneralStatus" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 640.0
+script = ExtResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GeneralStatus"]
+anchor_right = 1.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = -24.0
+margin_bottom = 76.0
+
+[node name="Control" type="Control" parent="GeneralStatus/HBoxContainer"]
+margin_right = 492.0
+margin_bottom = 64.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="PauseButton" type="Button" parent="GeneralStatus/HBoxContainer"]
+margin_left = 944.0
+margin_top = 26.0
+margin_right = 988.0
+margin_bottom = 64.0
+size_flags_horizontal = 10
+size_flags_vertical = 10
+icon = ExtResource( 1 )
+icon_align = 1
+script = ExtResource( 4 )
+
+[connection signal="pressed" from="Pause/HBoxContainer/BackToHome" to="Pause/HBoxContainer/BackToHome" method="_on_BackToHome_pressed"]
+[connection signal="off_ticker" from="Pause/HBoxContainer/Continue" to="Clock" method="_on_Continue_off_ticker"]
+[connection signal="pause_end" from="Pause/HBoxContainer/Continue" to="Clock" method="_on_Continue_pause_end"]
+[connection signal="pause_end" from="Pause/HBoxContainer/Continue" to="GeneralStatus" method="_on_Continue_pause_end"]
+[connection signal="pressed" from="Pause/HBoxContainer/Continue" to="Pause/HBoxContainer/Continue" method="_on_Continue_pressed"]
+[connection signal="ticker" from="Pause/HBoxContainer/Continue" to="Clock" method="_on_Continue_ticker"]
+[connection signal="timeout" from="Pause/HBoxContainer/Continue/ContinueClock" to="Pause/HBoxContainer/Continue" method="_on_ContinueClock_timeout"]
+[connection signal="pause_start" from="GeneralStatus/HBoxContainer/PauseButton" to="Pause" method="_on_PauseButton_pause_start"]
+[connection signal="pressed" from="GeneralStatus/HBoxContainer/PauseButton" to="GeneralStatus/HBoxContainer/PauseButton" method="_on_PauseButton_pressed"]

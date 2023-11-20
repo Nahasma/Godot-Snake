@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scene/Area/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Snake/Snake.tscn" type="PackedScene" id=2]
@@ -6,18 +6,9 @@
 [ext_resource path="res://UI/GrassBackground.png" type="Texture" id=4]
 [ext_resource path="res://UI/DirtTileset.png" type="Texture" id=5]
 [ext_resource path="res://UI/CliffTileset.png" type="Texture" id=6]
-[ext_resource path="res://src/img/UI/Pause/home.png" type="Texture" id=7]
+[ext_resource path="res://Scene/HUD/HUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Area/Grass.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Collection/Collection.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scene/Area/Continue.gd" type="Script" id=10]
-[ext_resource path="res://Scene/Area/PauseButton.gd" type="Script" id=11]
-[ext_resource path="res://Scene/Area/Pause.gd" type="Script" id=12]
-[ext_resource path="res://Scene/Area/GeneralStatus.gd" type="Script" id=13]
-[ext_resource path="res://src/img/UI/Pause/pause.png" type="Texture" id=14]
-[ext_resource path="res://src/img/UI/Pause/continue.png" type="Texture" id=15]
-[ext_resource path="res://Scene/Area/ContinueClock.gd" type="Script" id=16]
-[ext_resource path="res://Scene/Area/Clock.gd" type="Script" id=17]
-[ext_resource path="res://src/img/UI/Clock/number.tres" type="SpriteFrames" id=18]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -68,8 +59,6 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-
-[sub_resource type="Theme" id=3]
 
 [node name="world" type="Node2D"]
 
@@ -131,71 +120,4 @@ position = Vector2( 16, 16 )
 
 [node name="Collection" parent="." instance=ExtResource( 9 )]
 
-[node name="UI" type="Node2D" parent="."]
-
-[node name="Clock" type="Control" parent="UI"]
-visible = false
-margin_left = 451.0
-margin_top = 270.0
-margin_right = 551.0
-margin_bottom = 370.0
-script = ExtResource( 17 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="UI/Clock"]
-frames = ExtResource( 18 )
-centered = false
-
-[node name="Pause" type="Control" parent="UI"]
-pause_mode = 2
-visible = false
-margin_right = 1024.0
-margin_bottom = 640.0
-script = ExtResource( 12 )
-
-[node name="PauseColorRect" type="ColorRect" parent="UI/Pause"]
-margin_right = 1024.0
-margin_bottom = 642.0
-color = Color( 0, 0, 0, 0.27451 )
-
-[node name="BackToHome" type="Button" parent="UI/Pause"]
-margin_left = 704.0
-margin_top = 576.0
-margin_right = 768.0
-margin_bottom = 640.0
-theme = SubResource( 3 )
-icon = ExtResource( 7 )
-icon_align = 1
-
-[node name="Continue" type="Button" parent="UI/Pause"]
-margin_left = 832.0
-margin_top = 576.0
-margin_right = 896.0
-margin_bottom = 640.0
-icon = ExtResource( 15 )
-icon_align = 1
-script = ExtResource( 10 )
-
-[node name="ContinueClock" type="Timer" parent="UI/Pause/Continue"]
-script = ExtResource( 16 )
-
-[node name="GeneralStatus" type="Control" parent="UI"]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 13 )
-
-[node name="PauseButton" type="Button" parent="UI/GeneralStatus"]
-margin_left = 960.0
-margin_right = 1024.0
-margin_bottom = 64.0
-icon = ExtResource( 14 )
-icon_align = 1
-script = ExtResource( 11 )
-
-[connection signal="off_ticker" from="UI/Pause/Continue" to="UI/Clock" method="_on_Continue_off_ticker"]
-[connection signal="pause_end" from="UI/Pause/Continue" to="UI/Clock" method="_on_Continue_pause_end"]
-[connection signal="pause_end" from="UI/Pause/Continue" to="UI/GeneralStatus" method="_on_Continue_pause_end"]
-[connection signal="pressed" from="UI/Pause/Continue" to="UI/Pause/Continue" method="_on_Continue_pressed"]
-[connection signal="ticker" from="UI/Pause/Continue" to="UI/Clock" method="_on_Continue_ticker"]
-[connection signal="timeout" from="UI/Pause/Continue/ContinueClock" to="UI/Pause/Continue" method="_on_ContinueClock_timeout"]
-[connection signal="pause_start" from="UI/GeneralStatus/PauseButton" to="UI/Pause" method="_on_PauseButton_pause_start"]
-[connection signal="pressed" from="UI/GeneralStatus/PauseButton" to="UI/GeneralStatus/PauseButton" method="_on_PauseButton_pressed"]
+[node name="HUD" parent="." instance=ExtResource( 7 )]
