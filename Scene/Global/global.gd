@@ -1,10 +1,14 @@
 extends Node2D
 
+#
+var started_at: int = OS.get_unix_time()
+
 func start_game():
+	started_at = OS.get_unix_time()
 	_animate_transition_to("res://Scene/Area/world.tscn")
 	
 func back_to_title():
-	_animate_transition_to("res://UI/TitleScene.tscn")
+	_animate_transition_to("res://UI/Title/TitleScene.tscn")
 
 func _animate_transition_to(path):
 #	animation_player.play_backwards("fade-in")

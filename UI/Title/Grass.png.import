@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SYLTHERIN.png-ee89ff2b3c94d989fe0029a92c9e2ca4.stex"
+path="res://.import/Grass.png-8dfe082385faae6b8698453f583cdd6e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/SYLTHERIN.png"
-dest_files=[ "res://.import/SYLTHERIN.png-ee89ff2b3c94d989fe0029a92c9e2ca4.stex" ]
+source_file="res://UI/Title/Grass.png"
+dest_files=[ "res://.import/Grass.png-8dfe082385faae6b8698453f583cdd6e.stex" ]
 
 [params]
 

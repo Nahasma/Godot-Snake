@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bush.png-d4714878a1bbd3fa2c86a3d3ce35945d.stex"
+path="res://.import/Bush.png-1b098cea15de5ca319ddad707a487c77.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Bush.png"
-dest_files=[ "res://.import/Bush.png-d4714878a1bbd3fa2c86a3d3ce35945d.stex" ]
+source_file="res://UI/Title/Bush.png"
+dest_files=[ "res://.import/Bush.png-1b098cea15de5ca319ddad707a487c77.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree.png-b1adb699bedb12cd4ebcb33a75eb16ba.stex"
+path="res://.import/DirtTileset.png-c5a666a10c062c650fb45a40577b5f82.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Tree.png"
-dest_files=[ "res://.import/Tree.png-b1adb699bedb12cd4ebcb33a75eb16ba.stex" ]
+source_file="res://UI/Title/DirtTileset.png"
+dest_files=[ "res://.import/DirtTileset.png-c5a666a10c062c650fb45a40577b5f82.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

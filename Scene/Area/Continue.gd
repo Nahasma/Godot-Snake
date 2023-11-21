@@ -4,7 +4,7 @@ signal pause_end
 signal ticker
 signal off_ticker
 
-onready var pause = $".."
+onready var pause = get_node("../..")
 onready var clock = get_node("ContinueClock")
 
 #time_check: 检查是否到点了
@@ -23,7 +23,7 @@ func _input(event):
 #进行倒计时，结束后开始游戏
 func continue_game():
 	
-	pause.get_parent().visible = false
+	pause.visible = false
 	emit_signal("pause_end")
 	clock_count()
 

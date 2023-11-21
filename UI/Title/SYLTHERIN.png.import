@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CliffTileset.png-e917fbc6f8bcaa1fdbcd48b496b370b1.stex"
+path="res://.import/SYLTHERIN.png-2fdad238d4dd3ae858a7e14b78cff467.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/CliffTileset.png"
-dest_files=[ "res://.import/CliffTileset.png-e917fbc6f8bcaa1fdbcd48b496b370b1.stex" ]
+source_file="res://UI/Title/SYLTHERIN.png"
+dest_files=[ "res://.import/SYLTHERIN.png-2fdad238d4dd3ae858a7e14b78cff467.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
