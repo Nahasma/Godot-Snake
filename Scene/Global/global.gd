@@ -1,5 +1,8 @@
 extends Node2D
 
+func start_game():
+	_animate_transition_to("res://Scene/Area/world.tscn")
+	
 func back_to_title():
 	_animate_transition_to("res://UI/TitleScene.tscn")
 

@@ -17,6 +17,7 @@
 [node name="HUD" type="Control"]
 
 [node name="Clock" type="Control" parent="."]
+visible = false
 script = ExtResource( 8 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Clock"]
@@ -26,6 +27,7 @@ centered = false
 
 [node name="Pause" type="Control" parent="."]
 pause_mode = 2
+visible = false
 margin_right = 1024.0
 margin_bottom = 640.0
 script = ExtResource( 9 )
@@ -37,12 +39,14 @@ anchor_bottom = 1.0
 margin_left = 16.0
 margin_top = -64.0
 margin_right = -20.0
+mouse_filter = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Control" type="Control" parent="Pause/HBoxContainer"]
 margin_right = 326.0
 margin_bottom = 64.0
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -71,14 +75,15 @@ script = ExtResource( 5 )
 script = ExtResource( 7 )
 
 [node name="PauseColorRect" type="ColorRect" parent="Pause"]
-visible = false
 margin_right = 1024.0
 margin_bottom = 642.0
+mouse_filter = 2
 color = Color( 0, 0, 0, 0.27451 )
 
 [node name="GeneralStatus" type="Control" parent="."]
 margin_right = 1024.0
 margin_bottom = 640.0
+mouse_filter = 2
 script = ExtResource( 6 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GeneralStatus"]

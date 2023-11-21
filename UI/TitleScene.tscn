@@ -189,6 +189,7 @@ position = Vector2( 64, 3.8147e-06 )
 rotation = -3.14159
 texture = ExtResource( 6 )
 
+[connection signal="pressed" from="UI/MainMenu/START" to="." method="_on_START_pressed"]
 [connection signal="pressed" from="UI/MainMenu/QUIT" to="." method="_on_QUIT_pressed"]
 [connection signal="area_entered" from="UI/TitlePartten/AppleNode/AppleArea" to="UI/TitlePartten/AppleNode/AppleArea" method="_on_AppleArea_area_entered"]
 [connection signal="Run" from="UI/TitlePartten/SnakeNode" to="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D" method="_on_SnakeNode_Run"]
