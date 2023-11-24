@@ -1,10 +1,9 @@
 extends Control
 
-
+onready var animation = get_node("UI/TextureRect/AnimationPlayer")
 #准备游戏
 func _ready():
 	update_button()
-	print("yes")
 	pass
 		
 #开始游戏

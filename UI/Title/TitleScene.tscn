@@ -77,8 +77,8 @@ margin_left = 104.0
 margin_top = 120.0
 margin_right = 920.0
 margin_bottom = 264.0
-rect_rotation = -3.0
-rect_scale = Vector2( 1.1, 1.1 )
+rect_rotation = 2.08156
+rect_scale = Vector2( 0.919722, 0.919722 )
 rect_pivot_offset = Vector2( 408, 72 )
 mouse_filter = 2
 texture = ExtResource( 11 )
@@ -195,5 +195,4 @@ texture = ExtResource( 4 )
 [connection signal="area_entered" from="UI/TitlePartten/AppleNode/AppleArea" to="UI/TitlePartten/AppleNode/AppleArea" method="_on_AppleArea_area_entered"]
 [connection signal="Run" from="UI/TitlePartten/SnakeNode" to="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D" method="_on_SnakeNode_Run"]
 [connection signal="mouse_entered" from="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake" to="UI/TitlePartten/SnakeNode" method="_on_Snake_mouse_entered"]
-[connection signal="mouse_entered" from="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake" to="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake" method="_on_Snake_mouse_entered"]
 [connection signal="mouse_exited" from="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake" to="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D" method="_on_Snake_mouse_exited"]
