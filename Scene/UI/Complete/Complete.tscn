@@ -1,0 +1,124 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/theme/UI_theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/img/UI/Failure/Try.png" type="Texture" id=2]
+[ext_resource path="res://src/theme/CompleteTitle_theme.tres" type="Theme" id=3]
+[ext_resource path="res://src/theme/Failure_theme.tres" type="Theme" id=4]
+[ext_resource path="res://src/img/UI/Complete/Nexticon.png" type="Texture" id=5]
+[ext_resource path="res://src/img/UI/Failure/home_normal.png" type="Texture" id=6]
+[ext_resource path="res://Scene/UI/Complete/Complete.gd" type="Script" id=7]
+
+[node name="Complete" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="TextureRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.388235, 0.384314, 0.364706, 0.705882 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 64.0
+margin_top = 96.0
+margin_right = 960.0
+margin_bottom = 544.0
+mouse_filter = 2
+
+[node name="CompleteLabel" type="Label" parent="VBoxContainer"]
+margin_left = 137.0
+margin_right = 759.0
+margin_bottom = 65.0
+size_flags_horizontal = 4
+theme = ExtResource( 3 )
+text = "STAY Hungry"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+margin_left = 139.0
+margin_top = 120.0
+margin_right = 757.0
+margin_bottom = 323.0
+mouse_filter = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="Score" type="Label" parent="VBoxContainer/GridContainer"]
+margin_right = 345.0
+margin_bottom = 65.0
+theme = ExtResource( 4 )
+text = "Score "
+
+[node name="CollectionNum" type="Label" parent="VBoxContainer/GridContainer"]
+margin_left = 349.0
+margin_right = 618.0
+margin_bottom = 65.0
+theme = ExtResource( 4 )
+text = "12"
+
+[node name="Death" type="Label" parent="VBoxContainer/GridContainer"]
+margin_top = 69.0
+margin_right = 345.0
+margin_bottom = 134.0
+theme = ExtResource( 4 )
+text = "DEATH"
+
+[node name="DeathTime" type="Label" parent="VBoxContainer/GridContainer"]
+margin_left = 349.0
+margin_top = 69.0
+margin_right = 618.0
+margin_bottom = 134.0
+theme = ExtResource( 4 )
+text = "12"
+
+[node name="TimeCount" type="Label" parent="VBoxContainer/GridContainer"]
+margin_top = 138.0
+margin_right = 345.0
+margin_bottom = 203.0
+theme = ExtResource( 4 )
+text = "TIME"
+
+[node name="Time" type="Label" parent="VBoxContainer/GridContainer"]
+margin_left = 349.0
+margin_top = 138.0
+margin_right = 618.0
+margin_bottom = 203.0
+theme = ExtResource( 4 )
+text = "12 00"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 378.0
+margin_right = 896.0
+margin_bottom = 448.0
+mouse_filter = 2
+
+[node name="Try" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_left = 110.0
+margin_right = 186.0
+margin_bottom = 70.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource( 1 )
+icon = ExtResource( 2 )
+
+[node name="Home" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_left = 410.0
+margin_right = 486.0
+margin_bottom = 70.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource( 1 )
+icon = ExtResource( 6 )
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_left = 710.0
+margin_right = 786.0
+margin_bottom = 70.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+icon = ExtResource( 5 )
+
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Try" to="." method="_on_Try_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Home" to="." method="_on_Home_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
