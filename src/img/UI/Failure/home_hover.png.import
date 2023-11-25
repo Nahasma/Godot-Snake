@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grass.png-8dfe082385faae6b8698453f583cdd6e.stex"
+path="res://.import/home_hover.png-9b33d131284cb07a7f751d6de54f0f3a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Title/Grass.png"
-dest_files=[ "res://.import/Grass.png-8dfe082385faae6b8698453f583cdd6e.stex" ]
+source_file="res://src/img/UI/Failure/home_hover.png"
+dest_files=[ "res://.import/home_hover.png-9b33d131284cb07a7f751d6de54f0f3a.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

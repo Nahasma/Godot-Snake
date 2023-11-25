@@ -1,22 +1,11 @@
 extends Node2D
 
-#
 var started_at: int = OS.get_unix_time()
 
-func start_game():
-	started_at = OS.get_unix_time()
-	_animate_transition_to("res://Scene/Area/world.tscn")
-	
-func back_to_title():
-	_animate_transition_to("res://UI/Title/TitleScene.tscn")
+func go_to_world(key):
+	get_tree().paused = false
+	get_node("WorldControl").go_to_world(key)
 
-func _animate_transition_to(path):
-#	animation_player.play_backwards("fade-in")
-#	yield(animation_player, "animation_finished")
-	
-	if path:
-		get_tree().change_scene(path)
-	else:
-		get_tree().reload_current_scene()
-	
-#	animation_player.play("fade-in")	
+func go_to_ui(key):
+	get_tree().paused = false
+	get_node("WorldControl").go_to_ui(key)

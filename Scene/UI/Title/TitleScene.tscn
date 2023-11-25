@@ -1,16 +1,16 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://src/theme/UI_theme.tres" type="Theme" id=1]
-[ext_resource path="res://src/img/snake/snake-head/head_left.png" type="Texture" id=2]
-[ext_resource path="res://src/img/collection/apple.png" type="Texture" id=3]
-[ext_resource path="res://src/img/snake/snake-body/body_x.png" type="Texture" id=4]
-[ext_resource path="res://UI/Title/SnakeNode.gd" type="Script" id=5]
-[ext_resource path="res://UI/Title/Snake.gd" type="Script" id=6]
-[ext_resource path="res://UI/Title/AppleArea.gd" type="Script" id=7]
-[ext_resource path="res://UI/Title/PathFollow2D.gd" type="Script" id=8]
-[ext_resource path="res://UI/Title/TitleScene.gd" type="Script" id=9]
-[ext_resource path="res://UI/Title/GrassBackground.png" type="Texture" id=10]
-[ext_resource path="res://UI/Title/SYLTHERIN.png" type="Texture" id=11]
+[ext_resource path="res://script/UI/Title/PathFollow2D.gd" type="Script" id=1]
+[ext_resource path="res://script/UI/Title/SnakeNode.gd" type="Script" id=2]
+[ext_resource path="res://script/UI/Title/Snake.gd" type="Script" id=3]
+[ext_resource path="res://script/UI/Title/TitleScene.gd" type="Script" id=4]
+[ext_resource path="res://script/UI/Title/AppleArea.gd" type="Script" id=5]
+[ext_resource path="res://src/img/snake/snake-head/head_left.png" type="Texture" id=6]
+[ext_resource path="res://src/img/collection/apple.png" type="Texture" id=7]
+[ext_resource path="res://src/img/snake/snake-body/body_x.png" type="Texture" id=8]
+[ext_resource path="res://src/img/UI/Title/GrassBackground.png" type="Texture" id=9]
+[ext_resource path="res://src/img/UI/Title/SYLTHERIN.png" type="Texture" id=10]
+[ext_resource path="res://src/theme/UI_theme.tres" type="Theme" id=11]
 
 [sub_resource type="Animation" id=1]
 resource_name = "waggle"
@@ -58,7 +58,7 @@ height = 592.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 9 )
+script = ExtResource( 4 )
 
 [node name="UI" type="Control" parent="."]
 margin_right = 1024.0
@@ -69,7 +69,7 @@ mouse_filter = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 expand = true
 
 [node name="TextureRect" type="TextureRect" parent="UI"]
@@ -81,7 +81,7 @@ rect_rotation = 2.08156
 rect_scale = Vector2( 0.919722, 0.919722 )
 rect_pivot_offset = Vector2( 408, 72 )
 mouse_filter = 2
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 expand = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI/TextureRect"]
@@ -94,11 +94,11 @@ anchor_bottom = 0.5
 margin_left = 64.0
 margin_right = 192.0
 margin_bottom = 172.0
-theme = ExtResource( 1 )
+theme = ExtResource( 11 )
 
 [node name="START" type="Button" parent="UI/MainMenu"]
-margin_right = 128.0
-margin_bottom = 20.0
+margin_right = 138.0
+margin_bottom = 31.0
 rect_pivot_offset = Vector2( 32, 16 )
 size_flags_horizontal = 7
 size_flags_vertical = 7
@@ -106,29 +106,29 @@ action_mode = 0
 text = "START"
 
 [node name="CONTINUE" type="Button" parent="UI/MainMenu"]
-margin_top = 52.0
-margin_right = 128.0
-margin_bottom = 72.0
+margin_top = 63.0
+margin_right = 138.0
+margin_bottom = 94.0
 text = "CONTINUE"
 
 [node name="SET" type="Button" parent="UI/MainMenu"]
-margin_top = 104.0
-margin_right = 128.0
-margin_bottom = 124.0
+margin_top = 126.0
+margin_right = 138.0
+margin_bottom = 157.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 text = "SETTING"
 
 [node name="DATA" type="Button" parent="UI/MainMenu"]
-margin_top = 156.0
-margin_right = 128.0
-margin_bottom = 176.0
+margin_top = 189.0
+margin_right = 138.0
+margin_bottom = 220.0
 text = "DATA"
 
 [node name="QUIT" type="Button" parent="UI/MainMenu"]
-margin_top = 208.0
-margin_right = 128.0
-margin_bottom = 228.0
+margin_top = 252.0
+margin_right = 138.0
+margin_bottom = 283.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 text = "QUIT"
@@ -142,20 +142,20 @@ margin_bottom = 40.0
 [node name="AppleNode" type="Node2D" parent="UI/TitlePartten"]
 
 [node name="AppleArea" type="Area2D" parent="UI/TitlePartten/AppleNode"]
-script = ExtResource( 7 )
+script = ExtResource( 5 )
 
 [node name="appleSprite" type="Sprite" parent="UI/TitlePartten/AppleNode/AppleArea"]
 light_mask = 2
 position = Vector2( 368, 432 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 3 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI/TitlePartten/AppleNode/AppleArea"]
 position = Vector2( 304, 432 )
 shape = SubResource( 4 )
 
 [node name="SnakeNode" type="Node2D" parent="UI/TitlePartten"]
-script = ExtResource( 5 )
+script = ExtResource( 2 )
 
 [node name="Path2D" type="Path2D" parent="UI/TitlePartten/SnakeNode"]
 curve = SubResource( 2 )
@@ -163,12 +163,12 @@ curve = SubResource( 2 )
 [node name="PathFollow2D" type="PathFollow2D" parent="UI/TitlePartten/SnakeNode/Path2D"]
 position = Vector2( 1024, 432 )
 rotation = 3.14159
-script = ExtResource( 8 )
+script = ExtResource( 1 )
 
 [node name="Snake" type="Area2D" parent="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D"]
 position = Vector2( 1024, 432 )
 rotation = 3.14159
-script = ExtResource( 6 )
+script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake"]
 position = Vector2( 912, 432 )
@@ -178,17 +178,17 @@ shape = SubResource( 3 )
 [node name="Head" type="Sprite" parent="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake"]
 position = Vector2( 639.999, 432.002 )
 scale = Vector2( 8, 8 )
-texture = ExtResource( 2 )
+texture = ExtResource( 6 )
 
 [node name="Body1" type="Sprite" parent="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake/Head"]
 position = Vector2( 32, 3.8147e-06 )
 rotation = -3.14159
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 
 [node name="Body2" type="Sprite" parent="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake/Head"]
 position = Vector2( 64, 3.8147e-06 )
 rotation = -3.14159
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 
 [connection signal="pressed" from="UI/MainMenu/START" to="." method="_on_START_pressed"]
 [connection signal="pressed" from="UI/MainMenu/QUIT" to="." method="_on_QUIT_pressed"]

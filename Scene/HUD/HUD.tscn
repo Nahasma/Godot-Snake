@@ -32,6 +32,12 @@ margin_right = 1024.0
 margin_bottom = 640.0
 script = ExtResource( 9 )
 
+[node name="PauseColorRect" type="ColorRect" parent="Pause"]
+margin_right = 1024.0
+margin_bottom = 642.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.27451 )
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Pause"]
 anchor_top = 1.0
 anchor_right = 1.0
@@ -73,12 +79,6 @@ script = ExtResource( 5 )
 
 [node name="ContinueClock" type="Timer" parent="Pause/HBoxContainer/Continue"]
 script = ExtResource( 7 )
-
-[node name="PauseColorRect" type="ColorRect" parent="Pause"]
-margin_right = 1024.0
-margin_bottom = 642.0
-mouse_filter = 2
-color = Color( 0, 0, 0, 0.27451 )
 
 [node name="GeneralStatus" type="Control" parent="."]
 margin_right = 1024.0

@@ -78,6 +78,10 @@ func _on_SnakeHead_area_entered(area):
 		emit_signal("collection_hit")
 	
 	#障碍物检测	
+	elif area.is_in_group("Testapple") == true:
+		print("testapple")
+		pass
+		
 	else:
 		emit_signal("barrier_hit")
 

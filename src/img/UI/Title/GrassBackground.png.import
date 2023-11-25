@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DirtTileset.png-c5a666a10c062c650fb45a40577b5f82.stex"
+path="res://.import/GrassBackground.png-f1beb414134e9aa94c30e4972eeeaa50.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Title/DirtTileset.png"
-dest_files=[ "res://.import/DirtTileset.png-c5a666a10c062c650fb45a40577b5f82.stex" ]
+source_file="res://src/img/UI/Title/GrassBackground.png"
+dest_files=[ "res://.import/GrassBackground.png-f1beb414134e9aa94c30e4972eeeaa50.stex" ]
 
 [params]
 
@@ -19,8 +19,8 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
+flags/repeat=1
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

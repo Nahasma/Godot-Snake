@@ -19,7 +19,7 @@ script = ExtResource( 4 )
 position = Vector2( 16, 16 )
 shape = SubResource( 2 )
 
-[node name="Polygon2D" type="Polygon2D" parent="TestApple"]
+[node name="TestTool" type="Polygon2D" parent="TestApple"]
 visible = false
 polygon = PoolVector2Array( 4, 8, 4, 26, 28, 26, 28, 8 )
 

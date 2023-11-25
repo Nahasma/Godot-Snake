@@ -4,6 +4,7 @@ const snake_body =  preload("res://Scene/Snake/SnakeBody.tscn")
 
 var pre_body = null
 var next_body = null
+signal death
 
 #获取尾巴:递归
 func get_tail(body):
@@ -52,6 +53,7 @@ func do_add_body():
 
 #死亡结算
 func death():
+	emit_signal("death")
 	print("you died!")
 
 #收集物结算

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SYLTHERIN.png-2fdad238d4dd3ae858a7e14b78cff467.stex"
+path="res://.import/backicon.png-6fe0fc34f5cee7015b7c5391f2b3befe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Title/SYLTHERIN.png"
-dest_files=[ "res://.import/SYLTHERIN.png-2fdad238d4dd3ae858a7e14b78cff467.stex" ]
+source_file="res://src/img/UI/SelectTitle/backicon.png"
+dest_files=[ "res://.import/backicon.png-6fe0fc34f5cee7015b7c5391f2b3befe.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

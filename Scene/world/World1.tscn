@@ -1,14 +1,16 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://UI/Title/GrassBackground.png" type="Texture" id=1]
+[ext_resource path="res://src/img/UI/Title/GrassBackground.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Snake/Snake.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/HUD/HUD.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Area/Bush.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Collection/Collection.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Area/Tree.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Area/Grass.tscn" type="PackedScene" id=7]
-[ext_resource path="res://UI/Title/CliffTileset.png" type="Texture" id=8]
-[ext_resource path="res://UI/Title/DirtTileset.png" type="Texture" id=9]
+[ext_resource path="res://src/img/UI/Title/CliffTileset.png" type="Texture" id=8]
+[ext_resource path="res://src/img/UI/Title/DirtTileset.png" type="Texture" id=9]
+[ext_resource path="res://Scene/UI/Failure/Failure.tscn" type="PackedScene" id=10]
+[ext_resource path="res://script/world1/World1.gd" type="Script" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -61,10 +63,13 @@
 0/z_index = 0
 
 [node name="world" type="Node2D"]
+script = ExtResource( 11 )
 
-[node name="Map" type="Node2D" parent="."]
+[node name="Main" type="Node2D" parent="."]
 
-[node name="GrassBackground" type="Sprite" parent="Map"]
+[node name="Map" type="Node2D" parent="Main"]
+
+[node name="GrassBackground" type="Sprite" parent="Main/Map"]
 position = Vector2( 0, 1 )
 scale = Vector2( 2, 2.5 )
 texture = ExtResource( 1 )
@@ -72,52 +77,58 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 512, 256 )
 
-[node name="DirtyRoad" type="TileMap" parent="Map"]
+[node name="DirtyRoad" type="TileMap" parent="Main/Map"]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 
-[node name="Cliff" type="TileMap" parent="Map"]
+[node name="Cliff" type="TileMap" parent="Main/Map"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 format = 1
 
-[node name="Trees" type="Node2D" parent="Map"]
+[node name="Trees" type="Node2D" parent="Main/Map"]
 
-[node name="Tree" parent="Map/Trees" instance=ExtResource( 6 )]
+[node name="Tree" parent="Main/Map/Trees" instance=ExtResource( 6 )]
 position = Vector2( 161, 40 )
 
-[node name="Tree2" parent="Map/Trees" instance=ExtResource( 6 )]
+[node name="Tree2" parent="Main/Map/Trees" instance=ExtResource( 6 )]
 position = Vector2( 176, 136 )
 
-[node name="Tree3" parent="Map/Trees" instance=ExtResource( 6 )]
+[node name="Tree3" parent="Main/Map/Trees" instance=ExtResource( 6 )]
 position = Vector2( 312, 121 )
 
-[node name="Bushes" type="Node2D" parent="Map"]
+[node name="Bushes" type="Node2D" parent="Main/Map"]
 
-[node name="Bush" parent="Map/Bushes" instance=ExtResource( 4 )]
+[node name="Bush" parent="Main/Map/Bushes" instance=ExtResource( 4 )]
 position = Vector2( 242, 95 )
 
-[node name="Bush2" parent="Map/Bushes" instance=ExtResource( 4 )]
+[node name="Bush2" parent="Main/Map/Bushes" instance=ExtResource( 4 )]
 position = Vector2( 383, 97 )
 
-[node name="Bush3" parent="Map/Bushes" instance=ExtResource( 4 )]
+[node name="Bush3" parent="Main/Map/Bushes" instance=ExtResource( 4 )]
 position = Vector2( 66, 63 )
 
-[node name="Grasses" type="Node2D" parent="Map"]
+[node name="Grasses" type="Node2D" parent="Main/Map"]
 
-[node name="Grass" parent="Map/Grasses" instance=ExtResource( 7 )]
+[node name="Grass" parent="Main/Map/Grasses" instance=ExtResource( 7 )]
 position = Vector2( 146, 207 )
 
-[node name="Grass2" parent="Map/Grasses" instance=ExtResource( 7 )]
+[node name="Grass2" parent="Main/Map/Grasses" instance=ExtResource( 7 )]
 position = Vector2( 205, 207 )
 
-[node name="Grass3" parent="Map/Grasses" instance=ExtResource( 7 )]
+[node name="Grass3" parent="Main/Map/Grasses" instance=ExtResource( 7 )]
 position = Vector2( 464, 53 )
 
-[node name="Snake" parent="." instance=ExtResource( 2 )]
+[node name="Snake" parent="Main" instance=ExtResource( 2 )]
 position = Vector2( 16, 16 )
 
-[node name="Collection" parent="." instance=ExtResource( 5 )]
+[node name="Collection" parent="Main" instance=ExtResource( 5 )]
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
+
+[node name="Failure" parent="." instance=ExtResource( 10 )]
+pause_mode = 2
+visible = false
+
+[connection signal="death" from="Main/Snake" to="." method="_on_Snake_death"]
