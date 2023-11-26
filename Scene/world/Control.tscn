@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scene/world/Control.gd" type="Script" id=1]
 [ext_resource path="res://src/img/Area/door/door.tres" type="SpriteFrames" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 48, 48 )
 
 [node name="Control" type="Node2D"]
 script = ExtResource( 1 )
@@ -18,7 +21,7 @@ playing = true
 
 [node name="door" type="Area2D" parent="door/AnimatedSprite" groups=["door"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="door/AnimatedSprite/door"]
+[node name="doorshape" type="CollisionShape2D" parent="door/AnimatedSprite/door"]
 shape = SubResource( 1 )
 
 [node name="predoor" type="Node2D" parent="."]
@@ -26,7 +29,7 @@ shape = SubResource( 1 )
 [node name="Area2D" type="Area2D" parent="predoor" groups=["door"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="predoor/Area2D"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [connection signal="area_entered" from="door/AnimatedSprite/door" to="." method="_on_door_area_entered"]
 [connection signal="area_entered" from="predoor/Area2D" to="." method="_on_Area2D_area_entered"]
