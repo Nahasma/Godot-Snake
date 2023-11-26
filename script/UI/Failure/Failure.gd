@@ -14,7 +14,7 @@ func init_connect():
 func _on_Try_pressed():
 	Global.reset(1)
 	Global.add_death()
-	Global.go_to_world("World1")
+	Global.go_to_world(Global.current_level_str)
 
 func _on_Home_pressed():
 	Global.reset(0)

@@ -4,7 +4,12 @@ extends Node2D
 #方法依赖：go_to_world()
 var world_dict = {
 	"World1" : "res://Scene/world/World1.tscn",
-	"World2" : "res://Scene/world/World2.tscn"
+	"World2" : "res://Scene/world/World2.tscn",
+	"World3" : "res://Scene/world/World3.tscn",
+	"World4" : "res://Scene/world/World4.tscn",
+	"World5" : "res://Scene/world/World5.tscn",
+	"World6" : "res://Scene/world/World6.tscn",
+	"World7" : "res://Scene/world/thanks.tscn"
 }
 
 #该字典作用为：储存ui界面

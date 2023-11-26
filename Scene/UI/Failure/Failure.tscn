@@ -8,6 +8,7 @@
 [ext_resource path="res://src/img/UI/Failure/home_normal.png" type="Texture" id=6]
 
 [node name="Failure" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2

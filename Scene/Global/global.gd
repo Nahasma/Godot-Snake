@@ -6,7 +6,7 @@ var time = 0
 signal score_change
 
 #存放过关要求
-var pass_score = [0, 1, 10, 10, 10, 10, 10]
+var pass_score = [0, 1, 1, 1, 1, 1, 1]
 
 #存放当前分数
 var score = 0

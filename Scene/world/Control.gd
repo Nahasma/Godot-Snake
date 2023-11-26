@@ -1,11 +1,12 @@
 extends Node2D
 
 onready var Collection = $"../Main/Collection"
+onready var parent = $".."
 
 #pass_score:通关条件
 #pass_flag：创造door的条件
 #pass_flag：已经创造了door
-var pass_score = Global.pass_score[1]
+var pass_score = 999
 var pass_flag = false
 var pass_true_flag = false
 
@@ -17,7 +18,6 @@ signal complete
 func _ready():
 	init_door()
 	init_connect()
-	pass_score = Global.pass_score[1]
 
 #初始化信号链接
 func init_connect():
@@ -25,6 +25,7 @@ func init_connect():
 
 #初始化
 func init_door():
+	pass_score = Global.pass_score[parent.world_id]
 	global_position = Vector2(512,320)
 	get_node("door").visible = false
 	get_node("predoor").visible = true

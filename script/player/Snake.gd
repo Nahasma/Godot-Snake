@@ -31,7 +31,7 @@ func do_init_tail():
 	var temp = get_node("SnakeHead")
 	temp.next_body = body
 	body.pre_body = temp
-	body.global_position = Vector2(temp.global_position.x - 32, temp.global_position.y)
+	body.global_position = Vector2(temp.global_position.x, temp.global_position.y - 32)
 	body.next_position = temp.global_position
 	body.shift_tail()
 	body.ID = 1
