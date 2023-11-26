@@ -81,6 +81,9 @@ func _on_SnakeHead_area_entered(area):
 	elif area.is_in_group("Testapple") == true:
 		print("testapple")
 		pass
+	
+	elif area.is_in_group("door") == true:
+		pass
 		
 	else:
 		emit_signal("barrier_hit")

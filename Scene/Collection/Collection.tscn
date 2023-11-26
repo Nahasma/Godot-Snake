@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/img/collection/apple_frame.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://script/collection/Apple.gd" type="Script" id=2]
+[ext_resource path="res://script/collection/CollectionControl.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Collection/TestApple.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=2]
@@ -11,6 +12,7 @@ radius = 13.0
 radius = 14.0
 
 [node name="Collection" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="TestApple" type="Area2D" parent="." groups=["Testapple"]]
 script = ExtResource( 4 )
@@ -37,3 +39,4 @@ frames = ExtResource( 1 )
 [connection signal="area_entered" from="TestApple" to="TestApple" method="_on_TestApple_area_entered"]
 [connection signal="area_entered" from="Apple" to="Apple" method="_on_Apple_area_entered"]
 [connection signal="body_entered" from="Apple" to="Apple" method="_on_Apple_body_entered"]
+[connection signal="check_pass" from="Apple" to="." method="_on_Apple_check_pass"]
