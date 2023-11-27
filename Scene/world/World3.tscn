@@ -82,10 +82,10 @@ position = Vector2( 552, 560 )
 [node name="Grass" type="Node2D" parent="Main/Map"]
 
 [node name="Grass" parent="Main/Map/Grass" instance=ExtResource( 12 )]
-position = Vector2( 400, 104 )
+position = Vector2( 400, 96 )
 
 [node name="Grass2" parent="Main/Map/Grass" instance=ExtResource( 12 )]
-position = Vector2( 928, 280 )
+position = Vector2( 928, 288 )
 
 [node name="Grass3" parent="Main/Map/Grass" instance=ExtResource( 12 )]
 position = Vector2( 96, 352 )
@@ -93,10 +93,10 @@ position = Vector2( 96, 352 )
 [node name="Bush" type="Node2D" parent="Main/Map"]
 
 [node name="Bush" parent="Main/Map/Bush" instance=ExtResource( 11 )]
-position = Vector2( 248, 232 )
+position = Vector2( 224, 224 )
 
 [node name="Bush2" parent="Main/Map/Bush" instance=ExtResource( 11 )]
-position = Vector2( 528, 432 )
+position = Vector2( 544, 416 )
 
 [node name="Bush3" parent="Main/Map/Bush" instance=ExtResource( 11 )]
 position = Vector2( 784, 48 )
@@ -105,7 +105,7 @@ position = Vector2( 784, 48 )
 position = Vector2( 728, 560 )
 
 [node name="Bush5" parent="Main/Map/Bush" instance=ExtResource( 11 )]
-position = Vector2( 48, 176 )
+position = Vector2( 32, 224 )
 
 [node name="Control" parent="." instance=ExtResource( 2 )]
 

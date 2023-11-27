@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scene/Snake/Snake.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Collection/Collection.tscn" type="PackedScene" id=2]
@@ -9,6 +9,11 @@
 [ext_resource path="res://Scene/UI/Failure/Failure.tscn" type="PackedScene" id=7]
 [ext_resource path="res://script/world/world5/World5.gd" type="Script" id=8]
 [ext_resource path="res://src/img/Area/snow.png" type="Texture" id=9]
+[ext_resource path="res://Scene/Area/SnowCreator.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/Area/snow_grass.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/Area/snow_tree.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scene/Area/snow_bush.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scene/Area/lava.tscn" type="PackedScene" id=14]
 
 [node name="world" type="Node2D"]
 script = ExtResource( 8 )
@@ -19,6 +24,56 @@ script = ExtResource( 8 )
 margin_right = 1024.0
 margin_bottom = 640.0
 texture = ExtResource( 9 )
+
+[node name="Map" type="Node2D" parent="Main"]
+
+[node name="Snowcreator" parent="Main/Map" instance=ExtResource( 10 )]
+
+[node name="Plant" type="Node2D" parent="Main/Map"]
+
+[node name="snow_bush" parent="Main/Map/Plant" instance=ExtResource( 13 )]
+position = Vector2( 232, 216 )
+
+[node name="snow_tree" parent="Main/Map/Plant" instance=ExtResource( 12 )]
+position = Vector2( 352, 144 )
+
+[node name="snow_tree2" parent="Main/Map/Plant" instance=ExtResource( 12 )]
+position = Vector2( 352, 336 )
+
+[node name="snow_tree3" parent="Main/Map/Plant" instance=ExtResource( 12 )]
+position = Vector2( 352, 520 )
+
+[node name="snow_tree4" parent="Main/Map/Plant" instance=ExtResource( 12 )]
+position = Vector2( 608, 240 )
+
+[node name="snow_tree5" parent="Main/Map/Plant" instance=ExtResource( 12 )]
+position = Vector2( 608, 432 )
+
+[node name="snow_bush2" parent="Main/Map/Plant" instance=ExtResource( 13 )]
+position = Vector2( 472, 424 )
+
+[node name="snow_bush3" parent="Main/Map/Plant" instance=ExtResource( 13 )]
+position = Vector2( 728, 104 )
+
+[node name="snow_grass" parent="Main/Map/Plant" instance=ExtResource( 11 )]
+position = Vector2( 152, 112 )
+
+[node name="snow_grass2" parent="Main/Map/Plant" instance=ExtResource( 11 )]
+position = Vector2( 744, 368 )
+
+[node name="snow_grass3" parent="Main/Map/Plant" instance=ExtResource( 11 )]
+position = Vector2( 856, 304 )
+
+[node name="Lava" type="Node2D" parent="Main/Map"]
+
+[node name="Lava" parent="Main/Map/Lava" instance=ExtResource( 14 )]
+position = Vector2( 160, 352 )
+
+[node name="Lava2" parent="Main/Map/Lava" instance=ExtResource( 14 )]
+position = Vector2( 544, 544 )
+
+[node name="Lava3" parent="Main/Map/Lava" instance=ExtResource( 14 )]
+position = Vector2( 864, 96 )
 
 [node name="Snake" parent="Main" instance=ExtResource( 1 )]
 position = Vector2( 496, 48 )

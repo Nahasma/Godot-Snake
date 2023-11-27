@@ -78,10 +78,7 @@ func shift_body():
 func hide_body():
 	get_node("AnimatedSprite").frame = 10
 
-
-
-func _on_Area2D_body_shape_entered(_body_rid, body):
-	print(body.name)
-	if body.is_in_group("head"):
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("head"):
 		emit_signal("fail")
 		print("fail!")

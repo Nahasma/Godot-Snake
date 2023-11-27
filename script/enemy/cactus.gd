@@ -5,8 +5,6 @@ onready var animation = $AnimationPlayer
 var arouse: bool = false 
 var last_move_direction:bool = false 
 
-func _ready():
-	print("test")
 
 #移动
 func move(pos:Vector2):
@@ -58,7 +56,7 @@ func _on_Hitbox_area_entered(area):
 
 		if last_move_direction == true:
 			animation.play("move_right")
-			animation.play_backwards("move_left")
+			animation.play_backwards("move_right")
 
 		get_node("AniTimer").start()
 		

@@ -28,6 +28,8 @@ shape = SubResource( 2 )
 position = Vector2( 504, 648 )
 shape = SubResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderArea"]
+[node name="RightBorder" type="Area2D" parent="." groups=["right_border"]]
+
+[node name="RightBorder" type="CollisionShape2D" parent="RightBorder"]
 position = Vector2( 1033, 320 )
 shape = SubResource( 4 )
