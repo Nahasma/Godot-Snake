@@ -14,5 +14,4 @@ func random_create():
 	return temp_position
 	
 func _on_TestApple_area_entered(_area):
-	print("come on")
 	TestApple_Create()

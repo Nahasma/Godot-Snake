@@ -89,8 +89,10 @@ func _on_SnakeHead_area_entered(area):
 	#过滤敌人敌意范围
 	elif area.is_in_group("enemy") == true:
 		pass
+	
+	elif area.is_in_group("彩蛋") == true and Global.score >= 5:
+		pass
 		
 	else:
+		print("I die: ",area.name)
 		emit_signal("barrier_hit")
-
-	
