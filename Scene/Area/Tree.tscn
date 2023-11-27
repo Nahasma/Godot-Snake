@@ -7,7 +7,7 @@ position = Vector2( 192, 160 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 
-[node name="Tree_Area2D" type="Area2D" parent="."]
+[node name="Tree_Area2D" type="Area2D" parent="." groups=["barrier"]]
 collision_layer = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tree_Area2D"]

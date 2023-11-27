@@ -82,7 +82,12 @@ func _on_SnakeHead_area_entered(area):
 		print("testapple")
 		pass
 	
+	#过滤通关门
 	elif area.is_in_group("door") == true:
+		pass
+	
+	#过滤敌人敌意范围
+	elif area.is_in_group("enemy") == true:
 		pass
 		
 	else:

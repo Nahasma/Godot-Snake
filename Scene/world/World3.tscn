@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scene/Snake/Snake.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/world/Control.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Scene/UI/Failure/Failure.tscn" type="PackedScene" id=7]
 [ext_resource path="res://script/world/world3/World3.gd" type="Script" id=8]
 [ext_resource path="res://src/img/Area/desert.png" type="Texture" id=9]
+[ext_resource path="res://Scene/enemy/cactus.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/Area/Bush.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/Area/Grass.tscn" type="PackedScene" id=12]
 
 [node name="world" type="Node2D"]
 script = ExtResource( 8 )
@@ -27,9 +30,87 @@ position = Vector2( 496, 48 )
 
 [node name="Border" parent="Main" instance=ExtResource( 4 )]
 
+[node name="Map" type="Node2D" parent="Main"]
+
+[node name="Enemy" type="Node2D" parent="Main/Map"]
+
+[node name="cactus" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 280, 104 )
+
+[node name="cactus2" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 680, 104 )
+
+[node name="cactus3" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 152, 232 )
+
+[node name="cactus4" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 536, 168 )
+
+[node name="cactus5" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 344, 296 )
+
+[node name="cactus6" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 216, 424 )
+
+[node name="cactus7" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 648, 448 )
+
+[node name="cactus8" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 792, 360 )
+
+[node name="cactus9" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 856, 168 )
+
+[node name="cactus10" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 408, 488 )
+
+[node name="cactus11" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 856, 544 )
+
+[node name="cactus12" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 104, 552 )
+
+[node name="cactus13" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 688, 248 )
+
+[node name="cactus14" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 112, 72 )
+
+[node name="cactus15" parent="Main/Map/Enemy" instance=ExtResource( 10 )]
+position = Vector2( 552, 560 )
+
+[node name="Grass" type="Node2D" parent="Main/Map"]
+
+[node name="Grass" parent="Main/Map/Grass" instance=ExtResource( 12 )]
+position = Vector2( 400, 104 )
+
+[node name="Grass2" parent="Main/Map/Grass" instance=ExtResource( 12 )]
+position = Vector2( 928, 280 )
+
+[node name="Grass3" parent="Main/Map/Grass" instance=ExtResource( 12 )]
+position = Vector2( 96, 352 )
+
+[node name="Bush" type="Node2D" parent="Main/Map"]
+
+[node name="Bush" parent="Main/Map/Bush" instance=ExtResource( 11 )]
+position = Vector2( 248, 232 )
+
+[node name="Bush2" parent="Main/Map/Bush" instance=ExtResource( 11 )]
+position = Vector2( 528, 432 )
+
+[node name="Bush3" parent="Main/Map/Bush" instance=ExtResource( 11 )]
+position = Vector2( 784, 48 )
+
+[node name="Bush4" parent="Main/Map/Bush" instance=ExtResource( 11 )]
+position = Vector2( 728, 560 )
+
+[node name="Bush5" parent="Main/Map/Bush" instance=ExtResource( 11 )]
+position = Vector2( 48, 176 )
+
 [node name="Control" parent="." instance=ExtResource( 2 )]
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
+visible = false
 margin_right = 1024.0
 margin_bottom = 640.0
 

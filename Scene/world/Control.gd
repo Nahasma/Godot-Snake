@@ -53,9 +53,11 @@ func _on_Area2D_area_entered(area):
 
 #当检测到有蛇身/头离开时
 func _on_Area2D_area_exited(area):
-	if area.is_in_group("snake") == true:
-		in_predoor -= 1
-		_on_Collection_check()
+	if is_instance_valid(area) == true:
+		if area.is_in_group("snake") == true:
+			in_predoor -= 1
+			_on_Collection_check()
+
 
 #当检测到蛇头进入后通关
 func _on_door_area_entered(area):

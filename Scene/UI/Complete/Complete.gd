@@ -5,7 +5,6 @@ onready var Score = $VBoxContainer/GridContainer/CollectionNum
 onready var Death = $VBoxContainer/GridContainer/DeathTime
 onready var TimeUse = $VBoxContainer/GridContainer/Time
 
-signal refresh
 
 func _ready():
 	init_connect()

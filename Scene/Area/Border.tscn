@@ -14,7 +14,7 @@ extents = Vector2( 9, 336 )
 
 [node name="Border" type="Node2D"]
 
-[node name="BorderArea" type="Area2D" parent="."]
+[node name="BorderArea" type="Area2D" parent="." groups=["barrier"]]
 
 [node name="UpBorder" type="CollisionShape2D" parent="BorderArea"]
 position = Vector2( 512, -8 )

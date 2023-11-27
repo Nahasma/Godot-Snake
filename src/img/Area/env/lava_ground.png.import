@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lava.png-c2e08436d520636904709ed23d4c75d3.stex"
+path="res://.import/lava_ground.png-c74236579f59f520ba662e6dc629f80c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/img/Area/lava.png"
-dest_files=[ "res://.import/lava.png-c2e08436d520636904709ed23d4c75d3.stex" ]
+source_file="res://src/img/Area/env/lava_ground.png"
+dest_files=[ "res://.import/lava_ground.png-c74236579f59f520ba662e6dc629f80c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
