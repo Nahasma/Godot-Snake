@@ -6,7 +6,7 @@
 [ext_resource path="res://src/theme/Complete_theme.tres" type="Theme" id=4]
 [ext_resource path="res://src/img/UI/Complete/Nexticon.png" type="Texture" id=5]
 [ext_resource path="res://src/img/UI/Failure/home_normal.png" type="Texture" id=6]
-[ext_resource path="res://Scene/UI/Complete/Complete.gd" type="Script" id=7]
+[ext_resource path="res://script/UI/Complete/Complete.gd" type="Script" id=7]
 
 [node name="Complete" type="Control"]
 pause_mode = 2

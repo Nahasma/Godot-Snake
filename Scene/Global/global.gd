@@ -5,8 +5,11 @@ var completed_at: int = OS.get_unix_time()
 var time = 0
 signal score_change
 
+#存放历史数据
+var history = [0, 0, 0, 0, 0, 0, 0]
+
 #存放过关要求
-var pass_score = [0, 1, 1, 1, 1, 1, 1]
+var pass_score = [0, 3, 3, 3, 3, 3, 3]
 
 #存放当前分数
 var score = 0
@@ -15,6 +18,7 @@ var death_time = 0
 #存放当前关卡
 var current_level = 0
 var current_level_str 
+
 
 #字典存放关卡与对应的int值
 var level_dict = {
@@ -79,10 +83,15 @@ func reset(mode:int):
 	
 	pass
 
+#刷新历史
+func history_fresh():
+	history[current_level] = score
+
 func time_write():
 	
 	completed_at = OS.get_unix_time()
 	time = completed_at - started_at
+
 
 func add_death():
 	

@@ -90,7 +90,7 @@ func _on_SnakeHead_area_entered(area):
 	elif area.is_in_group("enemy") == true:
 		pass
 	
-	elif area.is_in_group("彩蛋") == true and Global.score >= 5:
+	elif area.is_in_group("彩蛋") == true and Global.score >= 60:
 		pass
 		
 	else:

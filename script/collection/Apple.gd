@@ -26,9 +26,12 @@ func _on_Apple_area_entered(area):
 	if area.is_in_group("Testapple") == false and area.is_in_group("door") == false and area.is_in_group("enemy") == false:	
 		apple_frame.frame = 2
 		get_node("Timer").start()
-		monitorable = false
+		set_deferred("monitorable", false)
 		if area.is_in_group("head"):
-			add_score(1)
+			if egg == 0:
+				add_score(1)
+			elif egg == 1:
+				add_score(15)
 
 #加分
 func add_score(myscore:int):
@@ -38,6 +41,6 @@ func add_score(myscore:int):
 
 
 func _on_Timer_timeout():
-	monitorable = true
+	set_deferred("monitorable", true)
 	Apple_Create()
 	apple_frame.frame = egg

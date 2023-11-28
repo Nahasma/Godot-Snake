@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://script/UI/Title/PathFollow2D.gd" type="Script" id=1]
 [ext_resource path="res://script/UI/Title/SnakeNode.gd" type="Script" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://src/img/UI/Title/GrassBackground.png" type="Texture" id=9]
 [ext_resource path="res://src/img/UI/Title/SYLTHERIN.png" type="Texture" id=10]
 [ext_resource path="res://src/theme/UI_theme.tres" type="Theme" id=11]
+[ext_resource path="res://src/img/UI/SelectTitle/backicon.png" type="Texture" id=12]
+[ext_resource path="res://src/theme/CompleteTitle_theme.tres" type="Theme" id=13]
+[ext_resource path="res://src/theme/DataTheme.tres" type="Theme" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "waggle"
@@ -97,38 +100,24 @@ margin_bottom = 172.0
 theme = ExtResource( 11 )
 
 [node name="START" type="Button" parent="UI/MainMenu"]
-margin_right = 138.0
-margin_bottom = 31.0
+margin_right = 128.0
+margin_bottom = 38.0
 rect_pivot_offset = Vector2( 32, 16 )
 size_flags_horizontal = 7
 size_flags_vertical = 7
 action_mode = 0
 text = "START"
 
-[node name="CONTINUE" type="Button" parent="UI/MainMenu"]
-margin_top = 63.0
-margin_right = 138.0
-margin_bottom = 94.0
-text = "CONTINUE"
-
-[node name="SET" type="Button" parent="UI/MainMenu"]
-margin_top = 126.0
-margin_right = 138.0
-margin_bottom = 157.0
-size_flags_horizontal = 7
-size_flags_vertical = 7
-text = "SETTING"
-
 [node name="DATA" type="Button" parent="UI/MainMenu"]
-margin_top = 189.0
-margin_right = 138.0
-margin_bottom = 220.0
+margin_top = 70.0
+margin_right = 128.0
+margin_bottom = 101.0
 text = "DATA"
 
 [node name="QUIT" type="Button" parent="UI/MainMenu"]
-margin_top = 252.0
-margin_right = 138.0
-margin_bottom = 283.0
+margin_top = 133.0
+margin_right = 128.0
+margin_bottom = 172.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 text = "QUIT"
@@ -190,9 +179,131 @@ position = Vector2( 64, 3.8147e-06 )
 rotation = -3.14159
 texture = ExtResource( 8 )
 
+[node name="DataUI" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 640.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="DataUI"]
+margin_right = 1024.0
+margin_bottom = 640.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.705882 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DataUI"]
+margin_right = 1024.0
+margin_bottom = 640.0
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="DataUI/VBoxContainer"]
+margin_left = 397.0
+margin_top = 72.0
+margin_right = 627.0
+margin_bottom = 137.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource( 13 )
+text = "DATA"
+align = 1
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="DataUI/VBoxContainer"]
+margin_left = 337.0
+margin_top = 226.0
+margin_right = 687.0
+margin_bottom = 412.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="vice_title" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_right = 333.0
+margin_bottom = 34.0
+theme = ExtResource( 14 )
+text = "Level 1 Best Score: "
+
+[node name="score" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_left = 337.0
+margin_right = 350.0
+margin_bottom = 34.0
+theme = ExtResource( 14 )
+text = "0"
+
+[node name="vice_title2" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_top = 38.0
+margin_right = 333.0
+margin_bottom = 72.0
+theme = ExtResource( 14 )
+text = "Level 2 Best Score: "
+
+[node name="score2" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_left = 337.0
+margin_top = 38.0
+margin_right = 350.0
+margin_bottom = 72.0
+theme = ExtResource( 14 )
+text = "0"
+
+[node name="vice_title3" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_top = 76.0
+margin_right = 333.0
+margin_bottom = 110.0
+theme = ExtResource( 14 )
+text = "Level 3 Best Score: "
+
+[node name="score3" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_left = 337.0
+margin_top = 76.0
+margin_right = 350.0
+margin_bottom = 110.0
+theme = ExtResource( 14 )
+text = "0"
+
+[node name="vice_title4" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_top = 114.0
+margin_right = 333.0
+margin_bottom = 148.0
+theme = ExtResource( 14 )
+text = "Level 4 Best Score: "
+
+[node name="score4" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_left = 337.0
+margin_top = 114.0
+margin_right = 350.0
+margin_bottom = 148.0
+theme = ExtResource( 14 )
+text = "0"
+
+[node name="vice_title5" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_top = 152.0
+margin_right = 333.0
+margin_bottom = 186.0
+theme = ExtResource( 14 )
+text = "Level 5 Best Score: "
+
+[node name="score5" type="Label" parent="DataUI/VBoxContainer/GridContainer"]
+margin_left = 337.0
+margin_top = 152.0
+margin_right = 350.0
+margin_bottom = 186.0
+theme = ExtResource( 14 )
+text = "0"
+
+[node name="Back" type="TextureButton" parent="DataUI/VBoxContainer"]
+margin_left = 480.0
+margin_top = 502.0
+margin_right = 544.0
+margin_bottom = 566.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource( 12 )
+
 [connection signal="pressed" from="UI/MainMenu/START" to="." method="_on_START_pressed"]
+[connection signal="pressed" from="UI/MainMenu/DATA" to="." method="_on_DATA_pressed"]
 [connection signal="pressed" from="UI/MainMenu/QUIT" to="." method="_on_QUIT_pressed"]
 [connection signal="area_entered" from="UI/TitlePartten/AppleNode/AppleArea" to="UI/TitlePartten/AppleNode/AppleArea" method="_on_AppleArea_area_entered"]
 [connection signal="Run" from="UI/TitlePartten/SnakeNode" to="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D" method="_on_SnakeNode_Run"]
 [connection signal="mouse_entered" from="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake" to="UI/TitlePartten/SnakeNode" method="_on_Snake_mouse_entered"]
 [connection signal="mouse_exited" from="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D/Snake" to="UI/TitlePartten/SnakeNode/Path2D/PathFollow2D" method="_on_Snake_mouse_exited"]
+[connection signal="pressed" from="DataUI/VBoxContainer/Back" to="." method="_on_Back_pressed"]

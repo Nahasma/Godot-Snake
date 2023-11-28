@@ -168,7 +168,6 @@ position = Vector2( 496, 48 )
 [node name="Control" parent="." instance=ExtResource( 4 )]
 
 [node name="HUD" parent="." instance=ExtResource( 5 )]
-visible = false
 margin_right = 1024.0
 margin_bottom = 640.0
 
