@@ -1,4 +1,5 @@
 # Godot-Snake
+
 ## 注意事项
 1. Godot版本为3.5.3LTS
 2. src文件夹里的文件为我收集的资源，以及部分自己绘画的资源，***仅限个人学习使用，严禁商用***。
@@ -22,6 +23,9 @@
 ``` 
 
 ## 游戏
+风格预览  
+![森林关卡](https://github.com/Nahasma/Godot-Snake/blob/main/src/PREVIEW/%E8%B4%AA%E5%90%83%E8%9B%87.png)
+
 
 关于玩家和收集物
 ```
