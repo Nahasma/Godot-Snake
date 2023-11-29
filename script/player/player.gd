@@ -3,7 +3,7 @@ extends Area2D
 var snake_direction: Vector2 = Vector2.ZERO
 var true_direction: Vector2 = Vector2.ZERO
 var time_count:int = 0
-var speed_time:int = 10
+var speed_time:int = 150
  
 var pre_body = null
 var next_body = null
