@@ -1,11 +1,21 @@
 # Godot-Snake
 ## 注意事项
-1. src文件夹里的文件为我收集的资源，以及部分自己绘画的资源，仅限个人学习使用，严禁商用。
-2. 由于是边学边做的，所以脚本风格与命名风格不太统一，同时耦合也比较严重，后续有机会会重构。
-3. 这是我的参考学习资源，最先是将这位老哥的项目[youtube-tutorials](https://github.com/uheartbeast/youtube-tutorials)导入后进行修改，所以有一些遗留的没用上的内容。
-4. 感谢b站up主[timothyqiu](https://space.bilibili.com/7092?spm_id_from=333.337.0.0)，很多godot开发知识是我看他视频收获到的，大家有机会可以支持一下。
-5. 这是我的第一个作品，各位有什么问题，建议和意见都可以反馈给我，我看到之后会及时答复，谢谢！
+1. Godot版本为3.5.3LTS
+2. src文件夹里的文件为我收集的资源，以及部分自己绘画的资源，***仅限个人学习使用，严禁商用***。
+3. 由于是边学边做的，所以脚本风格与命名风格不太统一，同时耦合也比较严重，后续有机会会重构。
+4. 这是我的参考学习资源，最先是将这位老哥的项目[youtube-tutorials](https://github.com/uheartbeast/youtube-tutorials)导入后进行修改，所以有一些遗留的没用上的内容。
+5. 感谢b站up主[timothyqiu](https://space.bilibili.com/7092?spm_id_from=333.337.0.0)，很多godot开发知识是我看他视频收获到的，大家有机会可以支持一下。
+6. 这是我的第一个作品，各位有什么问题，建议和意见都可以反馈给我，我看到之后会及时答复，谢谢！
+7. 如果你要做课程设计，建议不要直接copy，这个版本还有很多不足之处，更像是一个半成品。
 
+## 感谢
+1. b站up主[timothyqiu](https://space.bilibili.com/7092?spm_id_from=333.337.0.0)在b站提供的教程
+2. 油管主[HeartBeast](https://www.youtube.com/@uheartbeast)在油管提供的教程
+3. 图片转像素网站[LZ迷你工具箱](http://www.lizibuluo.com/xs)帮助我节省了很多绘画时间
+4. 开源字体网站[1001 Fonts](https://www.1001fonts.com/)及字体作者，我用到了**back-to-1982**，**lotsofdotz**，**ponderosa**，**8-bit-limit**，**pixelart-halloween**，**凤凰点阵体**字体设计者
+5. 像素画绘制软件[aseprite](http://www.lizibuluo.com/xs)提供了免费可编译的文件
+
+---
 ## 背景
 ```
 基于Godot引擎的贪吃蛇类游戏开发，北京理工大学自动化专业《软件工程导论》课程大作业
