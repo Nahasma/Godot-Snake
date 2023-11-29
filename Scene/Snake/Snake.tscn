@@ -19,6 +19,10 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="SnakeHead"]
 frames = ExtResource( 1 )
 
+[node name="Timer" type="Timer" parent="SnakeHead"]
+wait_time = 0.3
+
 [connection signal="area_entered" from="SnakeHead" to="SnakeHead" method="_on_SnakeHead_area_entered"]
 [connection signal="barrier_hit" from="SnakeHead" to="." method="_on_SnakeHead_barrier_hit"]
 [connection signal="collection_hit" from="SnakeHead" to="." method="_on_SnakeHead_collection_hit"]
+[connection signal="timeout" from="SnakeHead/Timer" to="SnakeHead" method="_on_Timer_timeout"]

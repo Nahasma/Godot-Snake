@@ -20,6 +20,9 @@ var completed_at: int = OS.get_unix_time()
 var time = 0
 signal score_change
 
+#存放蛇的移动速度
+var snake_speed = 0.15
+
 #存放历史数据
 var history = [0, 0, 0, 0, 0, 0, 0]
 
