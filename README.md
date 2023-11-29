@@ -1,4 +1,5 @@
 # Godot-Snake
+
 ## 注意事项
 1. Godot版本为3.5.3LTS
 2. src文件夹里的文件为我收集的资源，以及部分自己绘画的资源，***仅限个人学习使用，严禁商用***。
@@ -12,7 +13,7 @@
 1. b站up主[timothyqiu](https://space.bilibili.com/7092?spm_id_from=333.337.0.0)在b站提供的教程
 2. 油管主[HeartBeast](https://www.youtube.com/@uheartbeast)在油管提供的教程
 3. 图片转像素网站[LZ迷你工具箱](http://www.lizibuluo.com/xs)帮助我节省了很多绘画时间
-4. 开源字体网站[1001 Fonts](https://www.1001fonts.com/)及字体作者，我用到了**back-to-1982**，**lotsofdotz**，**ponderosa**，**8-bit-limit**，**pixelart-halloween**，**凤凰点阵体**字体设计者
+4. 开源字体网站[1001 Fonts](https://www.1001fonts.com/)及字体作者，我用到了**back-to-1982**，**lotsofdotz**，**ponderosa**，**8-bit-limit**，**pixelart-halloween**，**凤凰点阵体**，感谢字体设计者
 5. 像素画绘制软件[aseprite](http://www.lizibuluo.com/xs)提供了免费可编译的文件
 
 ---
@@ -22,6 +23,9 @@
 ``` 
 
 ## 游戏
+风格预览  
+![森林关卡](https://github.com/Nahasma/Godot-Snake/blob/main/src/PREVIEW/%E8%B4%AA%E5%90%83%E8%9B%87.png)
+
 
 关于玩家和收集物
 ```
